@@ -12,6 +12,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2.1.0
         with:
           # You should create a personal access token and store it in your repository
-          token: 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
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: logigearminhduytran/receive
           event_type: sample_push
