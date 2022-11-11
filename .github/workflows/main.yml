@@ -1,4 +1,4 @@
-name: run demo api
+name: Dispatch
 on:
   pull_request:
     branches: [main]
@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Repository Dispatch
-        uses: logigearminhduytran/test@v2
+        uses: logigearminhduytran/test@main
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           event-type: my-event
