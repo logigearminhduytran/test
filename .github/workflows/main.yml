@@ -13,5 +13,5 @@ jobs:
         with:
           # You should create a personal access token and store it in your repository
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: logigearminhduytran/receive
+          repository: mwd-tampham/lgvn-jp-api-postman-test
           event-type: sample_push
