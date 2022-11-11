@@ -2,6 +2,7 @@ name: Alert parent repository on push
 on: 
   push:
     branches: [main]
+  workflow_dispatch:
 jobs:
   build:
     name: Dispatch to `other-repo`
@@ -9,7 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Emit repository_dispatch
-        uses: logigearminhduytran/test@main
         with:
           # You should create a personal access token and store it in your repository
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
