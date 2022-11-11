@@ -1,0 +1,15 @@
+name: run demo api
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  Dispatch:
+    runs-on: windows-latest
+    steps:
+      - name: Repository Dispatch
+        uses: logigearminhduytran/test@v2
+        with:
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          event-type: my-event
+          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
