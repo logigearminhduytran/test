@@ -8,6 +8,7 @@ jobs:
     name: Dispatch to `other-repo`
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Emit repository_dispatch
         uses: logigearminhduytran/test@main
         with:
