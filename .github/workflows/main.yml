@@ -12,6 +12,6 @@ jobs:
         uses: peter-evans/repository-dispatch@v2.1.0
         with:
           # You should create a personal access token and store it in your repository
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: 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
           repository: logigearminhduytran/receive
           event_type: sample_push
